@@ -103,5 +103,7 @@ Another potential solution is to use something like Hadoop's Mapreduce to do bat
 * Better logging
 * Specify logstash as logger to leverage ELK
 * Write a potential downloader for automatically grabbing/unzipping source data
-* Testing against the ProcessFiles.py was tough, again due to time shortages and the limitations of multiprocessing
+* Rewrite processfiles to not use pool.map as it's messed up the abstraction layer I was going for
+* Refactor ProcessFiles
+* Add testing against the ProcessFiles.py this was tough, again due to time shortages and the limitations of multiprocessing
   * This means injecting say mock dependencies was a challenge.
