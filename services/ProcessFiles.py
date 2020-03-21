@@ -21,7 +21,7 @@ def push_files_to_db(filepath):
     df = pd.read_csv(filepath, usecols=fields)
     df.to_sql(os.environ['DEST_TABLE'], con=engine, index=False, if_exists='append')
 
-# This push functionality could then support multiple destinations
+# TODO - This push functionality could then support multiple destinations
 # adhering to the abstract class
 # e.g pushing to s3 and having SQS/Lambda process completely separately
 class AbstractProcessFiles(ABC):
