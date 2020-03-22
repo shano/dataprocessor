@@ -56,7 +56,7 @@ python -m unittest discover test
 * Pandas
 * SQLAlchemy
 * Docker
-* Python multi-processor functionality
+* Python multi-processor functionality, opted for this to avoid GIL(though I believe as this task is IO heavy GIL wouldn't be the biggest issue potentially).
 
 ### How would you treat/manage the import as part of your operational workload
 
@@ -107,3 +107,4 @@ Another potential solution is to use something like Hadoop's Mapreduce to do bat
 * Refactor ProcessFiles
 * Add testing against the ProcessFiles.py this was tough, again due to time shortages and the limitations of multiprocessing
   * This means injecting say mock dependencies was a challenge.
+* Potentially improved/explicit cleanup of resources from multi-processed tasks
